@@ -1,0 +1,54 @@
+ .env                                               |   7 [32m+[m
+ alembic.ini                                        | 149 [32m+++++++++++++++++++++[m
+ app/__init__.py                                    |   0
+ app/__pycache__/__init__.cpython-314.pyc           | Bin [31m0[m -> [32m152[m bytes
+ app/__pycache__/main.cpython-314.pyc               | Bin [31m0[m -> [32m1427[m bytes
+ app/api/__init__.py                                |   0
+ app/api/__pycache__/__init__.cpython-314.pyc       | Bin [31m0[m -> [32m156[m bytes
+ app/api/__pycache__/router.cpython-314.pyc         | Bin [31m0[m -> [32m475[m bytes
+ app/api/router.py                                  |  10 [32m++[m
+ app/api/routes/__init__.py                         |   0
+ .../routes/__pycache__/__init__.cpython-314.pyc    | Bin [31m0[m -> [32m163[m bytes
+ .../routes/__pycache__/categorias.cpython-314.pyc  | Bin [31m0[m -> [32m4055[m bytes
+ app/api/routes/__pycache__/health.cpython-314.pyc  | Bin [31m0[m -> [32m2083[m bytes
+ app/api/routes/categorias.py                       |  71 [32m++++++++++[m
+ app/api/routes/health.py                           |  43 [32m++++++[m
+ app/core/__init__.py                               |   0
+ app/core/__pycache__/__init__.cpython-314.pyc      | Bin [31m0[m -> [32m157[m bytes
+ app/core/__pycache__/config.cpython-314.pyc        | Bin [31m0[m -> [32m1926[m bytes
+ app/core/config.py                                 |  34 [32m+++++[m
+ app/database/__init__.py                           |   0
+ app/database/__pycache__/__init__.cpython-314.pyc  | Bin [31m0[m -> [32m161[m bytes
+ app/database/__pycache__/base.cpython-314.pyc      | Bin [31m0[m -> [32m442[m bytes
+ app/database/__pycache__/session.cpython-314.pyc   | Bin [31m0[m -> [32m1513[m bytes
+ app/database/base.py                               |   5 [32m+[m
+ app/database/session.py                            |  35 [32m+++++[m
+ app/main.py                                        |  34 [32m+++++[m
+ app/models/__init__.py                             |   4 [32m+[m
+ app/models/__pycache__/__init__.cpython-314.pyc    | Bin [31m0[m -> [32m310[m bytes
+ app/models/__pycache__/categoria.cpython-314.pyc   | Bin [31m0[m -> [32m1883[m bytes
+ app/models/__pycache__/lancamento.cpython-314.pyc  | Bin [31m0[m -> [32m3822[m bytes
+ app/models/categoria.py                            |  49 [32m+++++++[m
+ app/models/lancamento.py                           | 131 [32m++++++++++++++++++[m
+ app/repositories/__init__.py                       |   0
+ .../__pycache__/__init__.cpython-314.pyc           | Bin [31m0[m -> [32m165[m bytes
+ .../__pycache__/categoria.cpython-314.pyc          | Bin [31m0[m -> [32m3324[m bytes
+ app/repositories/categoria.py                      |  42 [32m++++++[m
+ app/schemas/__init__.py                            |   0
+ app/schemas/__pycache__/__init__.cpython-314.pyc   | Bin [31m0[m -> [32m160[m bytes
+ app/schemas/__pycache__/categoria.cpython-314.pyc  | Bin [31m0[m -> [32m1923[m bytes
+ app/schemas/categoria.py                           |  32 [32m+++++[m
+ app/services/__init__.py                           |   0
+ app/services/__pycache__/__init__.cpython-314.pyc  | Bin [31m0[m -> [32m161[m bytes
+ app/services/__pycache__/categoria.cpython-314.pyc | Bin [31m0[m -> [32m5194[m bytes
+ app/services/categoria.py                          |  83 [32m++++++++++++[m
+ migrations/README                                  |   1 [32m+[m
+ migrations/__pycache__/env.cpython-314.pyc         | Bin [31m0[m -> [32m2240[m bytes
+ migrations/env.py                                  |  48 [32m+++++++[m
+ migrations/script.py.mako                          |  28 [32m++++[m
+ .../versions/9c2d4c670bcb_criar_categorias.py      |  42 [32m++++++[m
+ .../9c2d4c670bcb_criar_categorias.cpython-314.pyc  | Bin [31m0[m -> [32m3175[m bytes
+ .../b816bacea313_criar_lancamentos.cpython-314.pyc | Bin [31m0[m -> [32m5844[m bytes
+ .../versions/b816bacea313_criar_lancamentos.py     | 145 [32m++++++++++++++++++++[m
+ requirements.txt                                   |   8 [32m++[m
+ 53 files changed, 1001 insertions(+)
