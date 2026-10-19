@@ -1,0 +1,163 @@
+.financas-app {
+  min-height: 100dvh;
+  padding-bottom: 110px;
+}
+
+.financas-app .navegacao-paginas {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  margin: 24px auto;
+  padding: 6px;
+  border: 1px solid #dfe8e2;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.financas-app .navegacao-paginas button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #637970;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.financas-app .navegacao-paginas button:hover {
+  background: #edf5ef;
+  color: #174f3e;
+}
+
+.financas-app .navegacao-paginas button[aria-pressed="true"] {
+  background: #174f3e;
+  color: #ffffff;
+}
+
+.financas-app .navegacao-paginas button:focus-visible,
+.financas-app .acoes-financeiras > button:focus-visible {
+  outline: 2px solid #174f3e;
+  outline-offset: 3px;
+}
+
+.financas-app .pagina-financeira-titulo {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 1160px;
+  margin: 36px auto 24px;
+}
+
+.financas-app .pagina-financeira-titulo h1 {
+  margin: 0;
+  color: #172b27;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.financas-app .pagina-financeira-titulo p {
+  margin: 10px 0 0;
+  color: #708178;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.financas-app .gastos-categorias {
+  margin-bottom: 24px;
+}
+
+.financas-app .acoes-financeiras {
+  position: fixed;
+  left: 50%;
+  right: auto;
+  bottom: 18px;
+  top: auto;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  margin: 0;
+  padding: 8px;
+  border: 1px solid #d7e4dd;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px #173c341a;
+  transform: translateX(-50%);
+}
+
+.financas-app .acoes-financeiras > button {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: auto;
+  min-height: 43px;
+  margin: 0;
+  padding: 0 14px;
+  border-radius: 9px;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 13px;
+  transform: none;
+}
+
+@media (max-width: 800px) {
+  .financas-app {
+    padding-bottom: 180px;
+  }
+
+  .financas-app .acoes-financeiras {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: min(540px, calc(100% - 24px));
+  }
+
+  .financas-app .acoes-financeiras > button {
+    width: 100%;
+    min-width: 0;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .financas-app {
+    padding-bottom: 220px;
+  }
+
+  .financas-app .navegacao-paginas button {
+    padding: 0 18px;
+    font-size: 13px;
+  }
+
+  .financas-app .pagina-financeira-titulo {
+    width: calc(100% - 24px);
+  }
+
+  .financas-app .acoes-financeiras {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .financas-app .navegacao-paginas button {
+    transition: none;
+  }
+}

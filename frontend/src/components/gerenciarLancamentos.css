@@ -1,0 +1,234 @@
+.gerenciar-dialog {
+  width: min(760px, calc(100% - 32px));
+}
+
+.gerenciar-filtro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 12px;
+  color: #526b5b;
+  font-size: 13px;
+}
+
+.gerenciar-filtro select {
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #d8e3dc;
+  border-radius: 9px;
+  background: #fff;
+  color: #254d3b;
+}
+
+.gerenciar-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gerenciar-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaf0ec;
+}
+
+.gerenciar-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.gerenciar-item-info > strong {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.gerenciar-item-info > span:not(.status) {
+  color: #75857b;
+  font-size: 12px;
+}
+
+.gerenciar-item-acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.gerenciar-item-acoes > strong {
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.gerenciar-item-acoes > div {
+  display: flex;
+  gap: 8px;
+}
+
+.gerenciar-item-acoes button,
+.gerenciar-paginacao button {
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid #d8e3dc;
+  border-radius: 8px;
+  background: #fff;
+  color: #315e46;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gerenciar-item-acoes .gerenciar-efetivar {
+  background: #eaf5ed;
+  border-color: #cce1d2;
+}
+
+.gerenciar-item-acoes .gerenciar-excluir {
+  color: #a84949;
+  border-color: #ecd6d3;
+}
+
+.gerenciar-item-acoes button:hover {
+  filter: brightness(0.96);
+}
+
+.gerenciar-paginacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 22px;
+  color: #718177;
+  font-size: 12px;
+}
+
+.gerenciar-confirmacao h3 {
+  margin-bottom: 12px;
+  font-size: 19px;
+}
+
+.gerenciar-confirmacao p {
+  color: #63796a;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.gerenciar-excluir-confirmar {
+  background: #ac4141;
+  border: 1px solid #ac4141;
+  color: white;
+}
+
+.gerenciar-aviso {
+  padding: 12px 14px;
+  border: 1px solid #cce4d4;
+  border-radius: 9px;
+  background: #edf8f0;
+  color: #235b3e;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.acoes-financeiras {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  padding: 8px;
+  transform: translateX(-50%);
+  border: 1px solid #dce7df;
+  border-radius: 17px;
+  background: #ffffffed;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 35px #173e321a;
+}
+
+.acoes-financeiras .categorias-abrir,
+.acoes-financeiras .gerenciar-abrir,
+.acoes-financeiras .novo-lancamento-botao {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 43px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #315e46;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  box-shadow: none;
+  transform: none;
+}
+
+.acoes-financeiras .novo-lancamento-botao {
+  background: #174f3e;
+  color: #fff;
+}
+
+.acoes-financeiras .categorias-abrir:hover,
+.acoes-financeiras .gerenciar-abrir:hover {
+  background: #edf5ef;
+}
+
+.acoes-financeiras .novo-lancamento-botao:hover {
+  background: #24694f;
+}
+
+.acoes-financeiras .lancamento-sucesso {
+  position: fixed;
+  right: 0;
+  bottom: calc(100% + 12px);
+  width: min(390px, calc(100vw - 36px));
+}
+
+.aplicacao .conteudo {
+  padding-bottom: 120px;
+}
+
+@media (max-width: 600px) {
+  .acoes-financeiras {
+    gap: 3px;
+    padding: 6px;
+    bottom: 12px;
+  }
+
+  .acoes-financeiras .categorias-abrir,
+  .acoes-financeiras .gerenciar-abrir,
+  .acoes-financeiras .novo-lancamento-botao {
+    min-height: 42px;
+    padding: 0 7px;
+    font-size: 11px;
+  }
+
+  .acoes-financeiras .novo-lancamento-botao {
+    gap: 4px;
+  }
+
+  .gerenciar-lista li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .gerenciar-item-acoes {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+}

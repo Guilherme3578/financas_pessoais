@@ -1,0 +1,234 @@
+.gastos-categorias {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 1160px;
+  margin: 24px auto 180px;
+  padding: 28px;
+  border: 1px solid #dfe8e2;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #172b27;
+}
+
+.gastos-categorias *,
+.gastos-categorias *::before,
+.gastos-categorias *::after {
+  box-sizing: border-box;
+}
+
+.gastos-categorias-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gastos-categorias-cabecalho h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.gastos-categorias-cabecalho p {
+  margin: 8px 0 0;
+  color: #708178;
+  font-size: 13px;
+}
+
+.gastos-categorias-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gastos-categorias-filtros label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #456457;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gastos-categorias-filtros input,
+.gastos-categorias-filtros select {
+  min-height: 42px;
+  min-width: 160px;
+  padding: 8px 12px;
+  border: 1px solid #cbded2;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #172b27;
+  font: inherit;
+  font-size: 13px;
+  color-scheme: light;
+}
+
+.gastos-categorias-filtros input:focus-visible,
+.gastos-categorias-filtros select:focus-visible,
+.gastos-categorias-erro button:focus-visible {
+  outline: 2px solid #174f3e;
+  outline-offset: 3px;
+}
+
+.gastos-categorias-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0 8px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f0f6f2;
+}
+
+.gastos-categorias-total span {
+  color: #526d5f;
+  font-size: 13px;
+}
+
+.gastos-categorias-total strong {
+  color: #174f3e;
+  font-size: 24px;
+  font-variant-numeric: tabular-nums;
+}
+
+.gastos-categorias-lista {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gastos-categorias-lista li {
+  padding: 16px 12px;
+  border-radius: 10px;
+  transition: background-color 160ms ease;
+}
+
+.gastos-categorias-lista li:hover {
+  background: #f6f9f7;
+}
+
+.gastos-categorias-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 11px;
+  font-size: 14px;
+}
+
+.gastos-categorias-linha > span {
+  overflow-wrap: anywhere;
+}
+
+.gastos-categorias-valores {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.gastos-categorias-valores strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gastos-categorias-valores small {
+  min-width: 52px;
+  color: #708178;
+  text-align: right;
+  font-size: 12px;
+}
+
+.gastos-categorias-trilho {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #edf2ee;
+}
+
+.gastos-categorias-trilho > div {
+  height: 100%;
+  border-radius: inherit;
+  background: #34755b;
+}
+
+.gastos-categorias-vazio {
+  margin: 0;
+  padding: 44px 16px;
+  color: #708178;
+  text-align: center;
+  font-size: 14px;
+}
+
+.gastos-categorias-erro {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #fff1f0;
+  color: #b54848;
+  font-size: 14px;
+}
+
+.gastos-categorias-erro p {
+  margin: 0 0 12px;
+}
+
+.gastos-categorias-erro button {
+  padding: 10px 14px;
+  border: 1px solid #e8c4c1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #b54848;
+  font: inherit;
+  cursor: pointer;
+}
+
+.gastos-categorias-nota {
+  margin: 20px 0 0;
+  color: #708178;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .gastos-categorias {
+    width: calc(100% - 24px);
+    margin-bottom: 220px;
+    padding: 20px;
+  }
+
+  .gastos-categorias-filtros {
+    width: 100%;
+  }
+
+  .gastos-categorias-filtros label {
+    flex: 1 1 150px;
+    min-width: 0;
+  }
+
+  .gastos-categorias-filtros input,
+  .gastos-categorias-filtros select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .gastos-categorias-valores {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gastos-categorias-lista li {
+    transition: none;
+  }
+}

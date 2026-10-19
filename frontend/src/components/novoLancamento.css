@@ -1,0 +1,304 @@
+.novo-lancamento-botao {
+  position: fixed;
+  right: 28px;
+  bottom: 26px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 22px;
+  border: 1px solid #174f3e;
+  border-radius: 14px;
+  background: #174f3e;
+  color: white;
+  font-weight: 650;
+  box-shadow: 0 8px 24px #174f3230;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.novo-lancamento-botao span {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.novo-lancamento-botao:hover {
+  transform: translateY(-3px);
+  background: #24694f;
+}
+
+.lancamento-dialog {
+  width: min(620px, calc(100% - 32px));
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 28px;
+  overflow-y: auto;
+  border: 1px solid #dde7e1;
+  border-radius: 20px;
+  background: #fff;
+  color: #172b27;
+  box-shadow: 0 24px 80px #102f3240;
+}
+
+.lancamento-dialog[open] {
+  animation: lancamento-entrar 180ms ease both;
+}
+
+.lancamento-dialog::backdrop {
+  background: #142d2666;
+  backdrop-filter: blur(4px);
+}
+
+.lancamento-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.lancamento-cabecalho h2 {
+  margin: 8px 0 0;
+  font-size: 25px;
+}
+
+.lancamento-fechar {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 10px;
+  background: #f0f5f2;
+  color: #527163;
+  font-size: 25px;
+}
+
+.lancamento-campos {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.lancamento-tipos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 5px;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  background: #f0f5f2;
+}
+
+.lancamento-tipos button {
+  min-height: 42px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #657b6c;
+  font-weight: 650;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.lancamento-tipos button.selecionado {
+  border-color: #dce7df;
+  background: white;
+  color: #174f3e;
+  box-shadow: 0 2px 6px #173e3208;
+}
+
+.lancamento-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+.lancamento-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  color: #496456;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.lancamento-grid input,
+.lancamento-grid select,
+.lancamento-grid textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 11px 12px;
+  border: 1px solid #d8e3dc;
+  border-radius: 9px;
+  background: #fff;
+  color: #234535;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color-scheme: light;
+  transition: border-color 180ms ease;
+}
+
+.lancamento-grid textarea {
+  resize: vertical;
+}
+
+.lancamento-grid input::placeholder,
+.lancamento-grid textarea::placeholder {
+  color: #93a198;
+}
+
+.lancamento-grid input:hover,
+.lancamento-grid select:hover,
+.lancamento-grid textarea:hover {
+  border-color: #9ab9a7;
+}
+
+.campo-inteiro {
+  grid-column: 1 / -1;
+}
+
+.lancamento-aviso,
+.lancamento-erro {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.lancamento-aviso {
+  background: #fff6e4;
+  color: #876119;
+}
+
+.lancamento-erro {
+  margin-top: 18px;
+  background: #fff1ef;
+  color: #a13d3d;
+}
+
+.lancamento-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #eaf0ec;
+}
+
+.lancamento-acoes button {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.lancamento-cancelar {
+  border: 1px solid #d8e3dc;
+  background: #fff;
+  color: #587162;
+}
+
+.lancamento-salvar {
+  border: 1px solid #174f3e;
+  background: #174f3e;
+  color: #fff;
+}
+
+.lancamento-salvar:hover:not(:disabled) {
+  background: #24694f;
+}
+
+.lancamento-dialog button:disabled,
+.lancamento-dialog input:disabled,
+.lancamento-dialog select:disabled,
+.lancamento-dialog textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lancamento-sucesso {
+  position: fixed;
+  right: 28px;
+  bottom: 90px;
+  z-index: 21;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: min(390px, calc(100% - 36px));
+  padding: 17px;
+  border: 1px solid #bcd9c8;
+  border-radius: 12px;
+  background: #edf8f0;
+  color: #235b3e;
+  box-shadow: 0 8px 24px #173e3214;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.lancamento-sucesso button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+}
+
+@keyframes lancamento-entrar {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .lancamento-dialog {
+    padding: 22px 18px;
+  }
+
+  .lancamento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .novo-lancamento-botao {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .lancamento-sucesso {
+    right: 18px;
+    bottom: 82px;
+  }
+
+  .lancamento-acoes button {
+    flex: 1;
+    padding: 0 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lancamento-dialog[open] {
+    animation: none;
+  }
+
+  .novo-lancamento-botao,
+  .lancamento-tipos button,
+  .lancamento-grid input,
+  .lancamento-grid select,
+  .lancamento-grid textarea {
+    transition: none;
+  }
+
+  .novo-lancamento-botao:hover {
+    transform: none;
+  }
+}

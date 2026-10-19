@@ -1,0 +1,238 @@
+.recorrencias-dialog {
+  width: min(720px, calc(100% - 32px));
+}
+
+.acoes-financeiras .recorrencias-abrir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #315e46;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.acoes-financeiras .recorrencias-abrir:hover {
+  background: #edf5ef;
+}
+
+.recorrencias-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.recorrencias-topo p {
+  margin: 0;
+  color: #718177;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.recorrencias-nova {
+  flex-shrink: 0;
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid #174f3e;
+  border-radius: 9px;
+  background: #174f3e;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recorrencias-nova:hover:not(:disabled) {
+  background: #24694f;
+}
+
+.recorrencias-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recorrencias-lista li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 22px;
+  padding: 22px 0;
+  border-bottom: 1px solid #e7eee9;
+}
+
+.recorrencias-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  min-width: 0;
+}
+
+.recorrencias-info > strong {
+  color: #345447;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.recorrencias-info > span:not(.status) {
+  color: #738379;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.recorrencias-lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.recorrencias-lateral > strong {
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+
+.recorrencias-botoes {
+  display: flex;
+  gap: 8px;
+}
+
+.recorrencias-botoes button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #d8e3dc;
+  border-radius: 9px;
+  background: #fff;
+  color: #526e5c;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.recorrencias-botoes .recorrencias-gerar {
+  background: #edf5ef;
+  color: #285b40;
+  border-color: #d5e6da;
+}
+
+.recorrencias-botoes button:hover:not(:disabled) {
+  background: #e3eee6;
+}
+
+.recorrencias-dialog button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.recorrencias-sucesso {
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  border: 1px solid #cce4d4;
+  border-radius: 10px;
+  background: #edf8f0;
+  color: #235b3e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.recorrencias-dialog .lancamento-erro {
+  margin: 0 0 20px;
+}
+
+.recorrencias-vazio {
+  padding: 30px 0;
+  color: #738379;
+  text-align: center;
+  font-size: 13px;
+}
+
+.recorrencias-nota {
+  margin: 18px 0 0;
+  color: #77887d;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.recorrencias-destaque {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding: 18px;
+  border: 1px solid #dce8df;
+  border-radius: 12px;
+  background: #f1f7f3;
+}
+
+.recorrencias-destaque strong {
+  color: #345447;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.recorrencias-destaque span {
+  color: #678071;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .acoes-financeiras {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(380px, calc(100% - 24px));
+  }
+
+  .acoes-financeiras > button {
+    width: 100%;
+  }
+
+  .acoes-financeiras .recorrencias-abrir {
+    min-height: 42px;
+    padding: 0 7px;
+    font-size: 11px;
+  }
+
+  .aplicacao .conteudo {
+    padding-bottom: 160px;
+  }
+
+  .recorrencias-topo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .recorrencias-lista li {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .recorrencias-lateral {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recorrencias-botoes button {
+    transition: none;
+  }
+}

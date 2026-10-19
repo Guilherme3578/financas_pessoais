@@ -1,0 +1,286 @@
+.agenda-financeira {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 1160px;
+  margin: 24px auto;
+  padding: 28px;
+  border: 1px solid #dfe8e2;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #172b27;
+}
+
+.agenda-financeira * {
+  box-sizing: border-box;
+}
+
+.agenda-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.agenda-cabecalho h2 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+.agenda-cabecalho p {
+  margin: 8px 0 0;
+  color: #708178;
+  font-size: 13px;
+}
+
+.agenda-filtro {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #456457;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.agenda-filtro select {
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid #cbded2;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #172b27;
+  font: inherit;
+  font-size: 13px;
+}
+
+.agenda-abas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.agenda-abas button,
+.agenda-financeira .agenda-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid #d7e4dd;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #174f3e;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.agenda-abas button[aria-pressed="true"] {
+  border-color: #174f3e;
+  background: #174f3e;
+  color: #ffffff;
+}
+
+.agenda-abas button:hover:not([aria-pressed="true"]),
+.agenda-financeira .agenda-botao:hover:not(:disabled) {
+  background: #edf5ef;
+}
+
+.agenda-financeira button:focus-visible,
+.agenda-filtro select:focus-visible {
+  outline: 2px solid #174f3e;
+  outline-offset: 3px;
+}
+
+.agenda-financeira .agenda-botao:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.agenda-periodo,
+.agenda-nota {
+  color: #708178;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.agenda-periodo {
+  margin: 12px 0 20px;
+}
+
+.agenda-resumo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.agenda-resumo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f4f7f6;
+}
+
+.agenda-resumo span {
+  color: #637970;
+  font-size: 13px;
+}
+
+.agenda-resumo strong {
+  font-size: 23px;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.agenda-financeira .agenda-despesa {
+  color: #b54848;
+}
+
+.agenda-financeira .agenda-receita {
+  color: #17744c;
+}
+
+.agenda-lista {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.agenda-lista li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 8px;
+  border-bottom: 1px solid #edf2ee;
+  transition: background-color 160ms ease;
+}
+
+.agenda-lista li:hover {
+  background: #f8faf9;
+}
+
+.agenda-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  min-width: 0;
+}
+
+.agenda-item-info > strong {
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.agenda-item-info > span,
+.agenda-item-valor > span {
+  color: #708178;
+  font-size: 12px;
+}
+
+.agenda-item-info small {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.agenda-atrasado {
+  background: #fff1f0;
+  color: #a83c3c;
+}
+
+.agenda-hoje {
+  background: #edf5ef;
+  color: #174f3e;
+}
+
+.agenda-item-valor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.agenda-item-valor strong {
+  font-size: 15px;
+}
+
+.agenda-paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.agenda-paginacao > span {
+  color: #708178;
+  font-size: 12px;
+}
+
+.agenda-paginacao > div {
+  display: flex;
+  gap: 8px;
+}
+
+.agenda-vazio {
+  padding: 30px 10px;
+  color: #708178;
+  text-align: center;
+  font-size: 14px;
+}
+
+.agenda-erro {
+  padding: 16px;
+  border-radius: 10px;
+  background: #fff1f0;
+  color: #b54848;
+  font-size: 14px;
+}
+
+.agenda-erro p {
+  margin: 0 0 12px;
+}
+
+.agenda-nota {
+  margin: 22px 0 0;
+}
+
+@media (max-width: 600px) {
+  .agenda-financeira {
+    width: calc(100% - 24px);
+    padding: 20px;
+  }
+
+  .agenda-resumo strong {
+    font-size: 19px;
+  }
+
+  .agenda-lista li {
+    gap: 12px;
+    padding-inline: 0;
+  }
+
+  .agenda-item-valor strong {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agenda-abas button,
+  .agenda-financeira .agenda-botao,
+  .agenda-lista li {
+    transition: none;
+  }
+}

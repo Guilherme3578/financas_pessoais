@@ -1,0 +1,153 @@
+.filtros-lancamentos {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid #e0e9e3;
+  border-radius: 14px;
+  background: #f7faf8;
+}
+
+.filtros-lancamentos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.filtros-lancamentos-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  color: #526b5b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filtros-lancamentos-grid .filtro-categoria {
+  grid-column: 1 / -1;
+}
+
+.filtros-lancamentos-grid input,
+.filtros-lancamentos-grid select {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  margin: 0;
+  padding: 0 12px;
+  border: 1px solid #d8e3dc;
+  border-radius: 9px;
+  background: #fff;
+  color: #254d3b;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  color-scheme: light;
+  transition: border-color 160ms ease;
+}
+
+.filtros-lancamentos-grid input:hover,
+.filtros-lancamentos-grid select:hover {
+  border-color: #a3bfad;
+}
+
+.filtros-lancamentos-grid input:focus-visible,
+.filtros-lancamentos-grid select:focus-visible {
+  outline: 2px solid #398468;
+  outline-offset: 2px;
+}
+
+.filtros-lancamentos-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.filtros-lancamentos-acoes button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid #d8e3dc;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.filtros-lancamentos-acoes .filtro-limpar {
+  background: #fff;
+  color: #607768;
+}
+
+.filtros-lancamentos-acoes .filtro-aplicar {
+  background: #174f3e;
+  border-color: #174f3e;
+  color: #fff;
+}
+
+.filtros-lancamentos-acoes .filtro-limpar:hover:not(:disabled) {
+  background: #edf4ef;
+}
+
+.filtros-lancamentos-acoes .filtro-aplicar:hover:not(:disabled) {
+  background: #24694f;
+}
+
+.filtros-lancamentos button:disabled,
+.filtros-lancamentos select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.filtros-lancamentos-erro {
+  margin: 12px 0 0;
+  color: #a34343;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.filtros-lancamentos-resumo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  padding-bottom: 8px;
+  color: #75857b;
+  font-size: 12px;
+}
+
+.gerenciar-item-acoes > div {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+  .filtros-lancamentos {
+    padding: 14px;
+  }
+
+  .filtros-lancamentos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros-lancamentos-acoes button {
+    flex: 1;
+  }
+
+  .gerenciar-item-acoes {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filtros-lancamentos-grid input,
+  .filtros-lancamentos-grid select,
+  .filtros-lancamentos-acoes button {
+    transition: none;
+  }
+}

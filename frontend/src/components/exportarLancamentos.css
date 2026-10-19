@@ -1,0 +1,65 @@
+.acoes-financeiras .exportar-abrir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #174f3e;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.acoes-financeiras .exportar-abrir:hover {
+  background: #e8f1ec;
+}
+
+.exportar-dialog button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid #d7e4dd;
+  border-radius: 9px;
+  background: #f4f7f6;
+  color: #174f3e;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms ease, opacity 160ms ease;
+}
+
+.exportar-dialog button:hover:not(:disabled) {
+  background: #e8f1ec;
+}
+
+.exportar-dialog button[type="submit"]:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.exportar-dialog button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.exportar-dialog button:focus-visible,
+.acoes-financeiras .exportar-abrir:focus-visible {
+  outline: 2px solid #174f3e;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .acoes-financeiras .exportar-abrir {
+    width: 100%;
+    min-height: 42px;
+    font-size: 11px;
+  }
+}
