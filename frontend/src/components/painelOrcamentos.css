@@ -1,0 +1,264 @@
+.painel-orcamentos {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 1160px;
+  margin: 24px auto;
+  padding: 28px;
+  border: 1px solid #dfe8e2;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #172b27;
+}
+
+.painel-orcamentos * {
+  box-sizing: border-box;
+}
+
+.po-cabecalho,
+.po-controles,
+.po-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.po-cabecalho {
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.po-cabecalho h2 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+.po-cabecalho p {
+  margin: 8px 0 0;
+  color: #708178;
+  font-size: 13px;
+}
+
+.po-controles {
+  align-items: flex-end;
+}
+
+.po-controles label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #456457;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.po-controles input,
+.po-controles button {
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid #cbded2;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #174f3e;
+  font: inherit;
+  font-size: 13px;
+  color-scheme: light;
+}
+
+.po-controles button {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.po-controles button:hover:not(:disabled) {
+  background: #edf5ef;
+}
+
+.po-controles button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.po-controles input:focus-visible,
+.po-controles button:focus-visible {
+  outline: 2px solid #174f3e;
+  outline-offset: 3px;
+}
+
+.po-indicadores {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.po-indicadores > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f4f7f6;
+}
+
+.po-indicadores strong {
+  font-size: 26px;
+  color: #174f3e;
+}
+
+.po-indicadores span {
+  color: #637970;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.po-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.po-lista > li {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #dfe8e2;
+  border-radius: 12px;
+  transition: box-shadow 160ms ease;
+}
+
+.po-lista > li:hover {
+  box-shadow: 0 5px 18px #173c340d;
+}
+
+.po-linha h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.po-status {
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #edf6ef;
+  color: #17744c;
+  font-size: 11px;
+}
+
+.po-atencao .po-status {
+  background: #fff5e8;
+  color: #8a6025;
+}
+
+.po-excedido .po-status {
+  background: #fff1f0;
+  color: #b54848;
+}
+
+.po-valores {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+  font-variant-numeric: tabular-nums;
+}
+
+.po-valores strong {
+  font-size: 23px;
+}
+
+.po-valores span {
+  color: #708178;
+  font-size: 12px;
+}
+
+.po-trilho {
+  height: 8px;
+  margin: 14px 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #edf2ee;
+}
+
+.po-trilho > div {
+  height: 100%;
+  border-radius: inherit;
+  background: #34755b;
+}
+
+.po-atencao .po-trilho > div {
+  background: #bc8b42;
+}
+
+.po-excedido .po-trilho > div {
+  background: #b54848;
+}
+
+.po-detalhes {
+  color: #637970;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.po-detalhes strong {
+  color: #174f3e;
+  font-weight: 600;
+}
+
+.po-excedido .po-detalhes strong {
+  color: #b54848;
+}
+
+.po-composicao,
+.po-nota {
+  margin: 16px 0 0;
+  color: #708178;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.po-vazio {
+  padding: 32px 12px;
+  color: #708178;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.po-erro {
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 9px;
+  background: #fff1f0;
+  color: #b54848;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .po-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .painel-orcamentos {
+    width: calc(100% - 24px);
+    padding: 20px;
+  }
+
+  .po-indicadores {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .po-lista > li {
+    transition: none;
+  }
+}

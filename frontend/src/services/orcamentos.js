@@ -25,12 +25,17 @@ async function enviar(caminho, metodo, dados) {
       throw new Error(detalhe.map((item) => item.msg).join(" · "));
     }
 
-    throw new Error(`Não foi possível concluir. Código: ${resposta.status}.`);
+    throw new Error(
+      `Não foi possível concluir. Código: ${resposta.status}.`,
+    );
   }
 
-  if (resposta.status === 204) return null;
+  const resultado =
+    resposta.status === 204 ? null : await resposta.json();
 
-  return resposta.json();
+  window.dispatchEvent(new Event("orcamentos-atualizados"));
+
+  return resultado;
 }
 
 export function listarOrcamentos(competencia, signal) {

@@ -14,5 +14,23 @@ __pycache__/
 node_modules/
 dist/
 
+/backups/
+*.backup
+*.partial
+
+.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+/frontend/dist/
+/backups/
+*.backup
+*.partial
+*.pbix
+
+
 # Logs
 *.log

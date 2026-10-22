@@ -3,5 +3,6 @@
   "pylint.cwd": "${workspaceFolder}/backend",
   "pylint.args": [
     "--init-hook=import sys, os; sys.path.insert(0, os.getcwd())"
-  ]
+  ],
+  "postman.settings.dotenv-detection-notification-visibility": false
 }
