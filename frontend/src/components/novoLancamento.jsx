@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { consultarApi, criarLancamento } from "../services/api";
-import "./NovoLancamento.css";
+import "./novoLancamento.css";
 
 function hojeLocal() {
     const hoje = new Date();

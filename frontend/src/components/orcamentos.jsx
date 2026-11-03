@@ -5,7 +5,7 @@ import {
   salvarOrcamento,
   excluirOrcamento,
 } from "../services/orcamentos";
-import "./Orcamentos.css";
+import "./orcamentos.css";
 
 const API_URL = (
   import.meta.env.VITE_API_URL || "/api/v1"

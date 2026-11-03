@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { listarOrcamentos } from "../services/orcamentos";
-import "./PainelOrcamentos.css";
+import "./painelOrcamentos.css";
 
 const moeda = new Intl.NumberFormat("pt-BR", {
   style: "currency",

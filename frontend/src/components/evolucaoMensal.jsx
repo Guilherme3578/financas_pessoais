@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { consultarApi } from "../services/api";
-import "./EvolucaoMensal.css";
+import "./evolucaoMensal.css";
 
 const moeda = new Intl.NumberFormat("pt-BR", {
   style: "currency",

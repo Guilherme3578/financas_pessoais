@@ -7,8 +7,8 @@ import {
   listarRecorrencias,
 } from "../services/recorrencias";
 
-import "./NovoLancamento.css";
-import "./Recorrencias.css";
+import "./novoLancamento.css";
+import "./recorrencias.css";
 
 const moeda = new Intl.NumberFormat("pt-BR", {
   style: "currency",

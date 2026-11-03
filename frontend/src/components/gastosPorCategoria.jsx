@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { consultarApi } from "../services/api";
 import { listarCategorias } from "../services/categorias";
-import "./GastosPorCategoria.css";
+import "./gastosPorCategoria.css";
 
 const moeda = new Intl.NumberFormat("pt-BR", {
   style: "currency",

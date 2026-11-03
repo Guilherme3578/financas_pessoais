@@ -5,8 +5,8 @@ import {
   listarCategorias,
 } from "../services/categorias";
 
-import "./NovoLancamento.css";
-import "./Categorias.css";
+import "./novoLancamento.css";
+import "./categorias.css";
 
 export default function Categorias() {
   const dialogRef = useRef(null);

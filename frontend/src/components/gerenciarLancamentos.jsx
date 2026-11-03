@@ -7,9 +7,9 @@ import {
 } from "../services/lancamentos";
 import EditarLancamento from "./editarLancamento";
 
-import "./NovoLancamento.css";
-import "./GerenciarLancamentos.css";
-import "./FiltrosLancamentos.css";
+import "./novoLancamento.css";
+import "./gerenciarLancamentos.css";
+import "./filtrosLancamentos.css";
 
 const moeda = new Intl.NumberFormat("pt-BR", {
     style: "currency",
