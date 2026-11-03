@@ -10,3 +10,9 @@ docs/
 analytics/
 backend/tests/
 backend/migrations/
+.env
+**/.env
+**/.env.*
+!**/.env.example
+.vercel/
+frontend/dist/
