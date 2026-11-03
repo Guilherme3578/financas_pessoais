@@ -1,8 +1,2 @@
-fastapi
-uvicorn[standard]
-pydantic-settings
-sqlalchemy
-pg8000
-alembic
-pandas
-openpyxl
+# Dependências ficam na raiz (usadas também pelo Vercel).
+-r ../requirements.txt

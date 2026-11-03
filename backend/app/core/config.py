@@ -11,11 +11,14 @@ BACKEND_DIR = Path(__file__).resolve().parents[2]
 class Settings(BaseSettings):
     app_name: str = "Controle de Finanças"
 
+    # Usado na nuvem (Neon, Supabase etc.). Tem prioridade sobre os DB_*.
+    database_url: SecretStr | None = None
+
     db_host: str = "localhost"
     db_port: int = 5432
     db_name: str = "financas_controle"
     db_user: str = "postgres"
-    db_password: SecretStr
+    db_password: SecretStr | None = None
 
     cors_origins: list[str] = [
         "http://localhost:5173",

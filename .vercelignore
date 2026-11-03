@@ -1,0 +1,12 @@
+.venv/
+**/.venv/
+**/node_modules/
+**/__pycache__/
+backups/
+*.pbix
+*.backup
+*.cmd
+docs/
+analytics/
+backend/tests/
+backend/migrations/

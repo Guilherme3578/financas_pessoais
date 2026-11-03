@@ -219,3 +219,26 @@ Fora desta versão:
 - Cartões de crédito, faturas e parcelamento.
 - Saldo inicial e transferências entre contas.
 - Metas de economia e investimentos.
+
+## Publicação no Vercel
+
+O frontend é publicado como site estático e a API roda como função
+Python em `/api` (arquivos `vercel.json` e `api/index.py`).
+
+1. Crie um banco PostgreSQL na nuvem (ex.: Neon, pelo menu Storage do
+   Vercel) e copie a connection string.
+2. Aplique as migrações no banco novo, a partir de `backend`:
+
+   ```powershell
+   $env:DATABASE_URL="postgresql://..."
+   python -m alembic upgrade head
+   ```
+
+3. Importe o repositório no Vercel, mantendo a raiz do projeto.
+4. Em Settings > Environment Variables, configure:
+   - `DATABASE_URL`: connection string do banco.
+   - `APP_USER` e `APP_PASSWORD`: usuário e senha de acesso ao site.
+5. Faça o deploy.
+
+O `middleware.js` exige usuário e senha em todas as páginas e na API.
+Sem `APP_USER` e `APP_PASSWORD`, o site fica bloqueado.
