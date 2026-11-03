@@ -227,12 +227,9 @@ Python em `/api` (arquivos `vercel.json` e `api/index.py`).
 
 1. Crie um banco PostgreSQL na nuvem (ex.: Neon, pelo menu Storage do
    Vercel) e copie a connection string.
-2. Aplique as migrações no banco novo, a partir de `backend`:
-
-   ```powershell
-   $env:DATABASE_URL="postgresql://..."
-   python -m alembic upgrade head
-   ```
+2. Com o PostgreSQL local ligado, execute `enviar_para_nuvem.cmd`.
+   O script copia tabelas e dados do banco local para o banco na nuvem.
+   Ele pede a connection string e a senha do PostgreSQL local.
 
 3. Importe o repositório no Vercel, mantendo a raiz do projeto.
 4. Em Settings > Environment Variables, configure:
